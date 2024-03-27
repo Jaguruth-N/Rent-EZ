@@ -1,11 +1,17 @@
+@import "../../responsive.scss";
+
 nav {
+    height: 100px;
     display: flex;
     justify-content: space-between;
-    height: 100px;
     align-items: center;
 
     a {
-        transition: all 0.2s ease;
+        transition: all 0.4s ease;
+
+        @include sm {
+            display: none;
+        }
 
         &:hover {
             scale: 1.05;
@@ -17,17 +23,27 @@ nav {
         flex: 3;
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 50px;
 
         .logo {
             font-weight: bold;
             font-size: 20px;
             display: flex;
-            gap: 10px;
             align-items: center;
+            gap: 10px;
 
             img {
                 width: 85px;
+            }
+
+            span {
+                @include md {
+                    display: none;
+                }
+
+                @include sm {
+                    display: initial;
+                }
             }
         }
     }
@@ -41,6 +57,10 @@ nav {
         background-color: #fcf5f3;
         height: 100%;
 
+        @include md {
+            background-color: transparent;
+        }
+
         a {
             padding: 12px 24px;
             margin: 20px;
@@ -48,6 +68,49 @@ nav {
 
         .register {
             background-color: #fece51;
+        }
+
+        .menuIcon {
+            display: none;
+            z-index: 5;
+
+            img {
+                width: 36px;
+                height: 36px;
+
+                cursor: pointer;
+
+            }
+
+            @include sm {
+                display: inline;
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            right: -50%;
+            background-color: black;
+            color: whitesmoke;
+            height: 100vh;
+            width: 50%;
+            transition: all 0.76s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+
+            &.active {
+                right: 0;
+            }
+
+            @include sm {
+                a {
+                    display: initial;
+                }
+            }
         }
     }
 }
