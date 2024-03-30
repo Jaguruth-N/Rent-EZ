@@ -1,4 +1,4 @@
-// import "./layout.scss"
+import "./routes/layout/layout.scss"
 
 import HomePage from "./routes/homePage/HomePage.jsx"
 import Layout from "./routes/layout/Layout.jsx";

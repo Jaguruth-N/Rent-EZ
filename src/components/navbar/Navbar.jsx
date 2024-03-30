@@ -7,29 +7,30 @@ function Navbar() {
 
         <nav>
             <div className="left">
-                <Link to={`/`}>                    <img src="/logo.png" alt="" width='100px' />
+                <Link to={`/`} className="link logo">
+                    <img src="/logo.png" alt="" width='100px' />
                     <span>RentEZ</span> </Link>
-                <Link to={`/`}>Home</Link>
-                <Link to={`/`}>Contact</Link>
-                <Link to={`/`}>About</Link>
-                <Link to={`/`}>Agents</Link>
+                <Link to={`/`} className="link">Home</Link>
+                <Link to={`/`} className="link">Contact</Link>
+                <Link to={`/`} className="link">About</Link>
+                <Link to={`/`} className="link">Agents</Link>
 
 
             </div>
             <div className="right">
 
-                <Link to={`/`}>Sign in</Link>
-                <Link to={`/`} className="register">Sign up</Link>
+                <Link to={`/`} className="link">Sign in</Link>
+                <Link to={`/`} className="link register">Sign up</Link>
                 <div className="menuIcon">
                     <img src="/menu.png" alt="" onClick={() => SetOpen(prev => !prev)} />
                 </div>
                 <div className={open ? "menu active" : "menu"}>
-                    <Link to={`/`}>Home</Link>
-                    <Link to={`/`}>Contact</Link>
-                    <Link to={`/`}>About</Link>
-                    <Link to={`/`}>Agents</Link>
-                    <Link to={`/`}>Sign in</Link>
-                    <Link to={`/`}>Sign up</Link>
+                    <Link to={`/`} className="link">Home</Link>
+                    <Link to={`/`} className="link">Contact</Link>
+                    <Link to={`/`} className="link">About</Link>
+                    <Link to={`/`} className="link">Agents</Link>
+                    <Link to={`/`} className="link">Sign in</Link>
+                    <Link to={`/`} className="link">Sign up</Link>
 
                 </div>
             </div>

@@ -1,8 +1,16 @@
 @import "../../responsive.scss";
 
 .homePage {
+    // overflow-y: scroll;
+    // overflow-y: hidden;
     display: flex;
     height: 100%;
+
+    // -webkit-scrollbar {
+    //     display: none;
+    //     /* Hide scrollbar for Chrome, Safari, and Opera */
+    // }
+
 
     .textContainer {
         flex: 3;
@@ -73,6 +81,7 @@
 
             @include lg {
                 width: 105%;
+
             }
         }
     }
