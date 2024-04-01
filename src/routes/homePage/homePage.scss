@@ -13,6 +13,7 @@
 
 
     .textContainer {
+        // overflow-y: scroll;
         flex: 3;
 
         .wrapper {
@@ -64,6 +65,7 @@
     }
 
     .imageContainer {
+        // overflow-y: scroll;
         flex: 2;
         background-color: #fcf5f3;
         position: relative;
@@ -80,6 +82,8 @@
             right: 0;
 
             @include lg {
+                top: -28px;
+                // height: 115%;
                 width: 105%;
 
             }

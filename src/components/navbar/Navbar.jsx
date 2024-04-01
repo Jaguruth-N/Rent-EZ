@@ -1,41 +1,50 @@
 import { useState } from "react";
-import "./navbar.scss"
+import "./navbar.scss";
 import { Link } from "react-router-dom";
-function Navbar() {
-    const [open, SetOpen] = useState(false);
-    return (
 
+function Navbar() {
+    const [open, setOpen] = useState(false);
+
+    const user = true;
+    return (
         <nav>
             <div className="left">
-                <Link to={`/`} className="link logo">
-                    <img src="/logo.png" alt="" width='100px' />
-                    <span>RentEZ</span> </Link>
-                <Link to={`/`} className="link">Home</Link>
-                <Link to={`/`} className="link">Contact</Link>
-                <Link to={`/`} className="link">About</Link>
-                <Link to={`/`} className="link">Agents</Link>
-
-
+                <a href="/" className="logo">
+                    <img src="/logo.png" alt="" />
+                    <span>Rent EZ</span>
+                </a>
+                <a href="/">Home</a>
+                <a href="/">About</a>
+                <a href="/">Contact</a>
+                <a href="/">Agents</a>
             </div>
-            <div className="right">
 
-                <Link to={`/`} className="link">Sign in</Link>
-                <Link to={`/`} className="link register">Sign up</Link>
+            <div className="right">
+                {user ? (<div className="user">
+                    <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+                    <span>John Doe</span>
+                    <Link to="/profile" className="profile"><div className="notification">3</div>
+                        <span>Profile</span></Link></div>) : (<>
+
+                            <a href="/">Sign In</a>
+                            <a href="/" className="register">
+                                Sign Up
+                            </a>
+                        </>
+                )}
                 <div className="menuIcon">
-                    <img src="/menu.png" alt="" onClick={() => SetOpen(prev => !prev)} />
+                    <img src="/menu.png" alt="" onClick={() => setOpen((prev) => !prev)} />
                 </div>
                 <div className={open ? "menu active" : "menu"}>
-                    <Link to={`/`} className="link">Home</Link>
-                    <Link to={`/`} className="link">Contact</Link>
-                    <Link to={`/`} className="link">About</Link>
-                    <Link to={`/`} className="link">Agents</Link>
-                    <Link to={`/`} className="link">Sign in</Link>
-                    <Link to={`/`} className="link">Sign up</Link>
-
+                    <a href="/">Home</a>
+                    <a href="/">About</a>
+                    <a href="/">Contact</a>
+                    <a href="/">Agents</a>
+                    <a href="/">Sign In</a>
+                    <a href="/">Sign Up</a>
                 </div>
             </div>
         </nav>
-
     );
 }
 

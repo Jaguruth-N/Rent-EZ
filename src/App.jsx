@@ -5,6 +5,7 @@ import Layout from "./routes/layout/Layout.jsx";
 import ListPage from './routes/listPage/ListPage.jsx'
 import SinglePage from "./routes/SinglePage/SinglePage.jsx";
 import Login from "./routes/Login/Login.jsx";
+import ProfilePage from "./routes/profilePage/ProfilePage.jsx";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -31,8 +32,8 @@ function App() {
         element: <SinglePage />
       },
       {
-        path: '/:id',
-        element: <Login />
+        path: '/profile',
+        element: <ProfilePage />
       }
     ]
 
