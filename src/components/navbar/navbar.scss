@@ -75,6 +75,7 @@ nav .right {
 nav .right a {
     padding: 12px 24px;
     margin: 20px;
+    border-radius: 5px;
 }
 
 nav .right .user {
@@ -98,7 +99,7 @@ nav .right .user span {
 }
 
 nav .right .user .profile {
-    padding: 12px 24px;
+    padding: 10px 24px;
     background-color: #fece51;
     cursor: pointer;
     border: none;
@@ -134,6 +135,7 @@ nav .right .menuIcon img {
     cursor: pointer;
 }
 
+
 @media (max-width: 738px) {
     nav .right .menuIcon {
         display: inline;
@@ -164,4 +166,9 @@ nav .right .menu.active {
     nav .right .menu a {
         display: initial;
     }
+}
+
+.profilePic {
+    display: flex;
+    align-items: center;
 }

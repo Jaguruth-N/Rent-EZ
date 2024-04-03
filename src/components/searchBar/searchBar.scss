@@ -79,11 +79,15 @@
                 border: 1px solid #999;
             }
         }
-
+        input:focus {
+            outline-style: none;
+            box-shadow: none;
+        }
         button {
             border: none;
             cursor: pointer;
-            background-color: #fece51;
+            background-color: white;
+            
             flex: 1;
 
             @include sm {
@@ -91,8 +95,8 @@
             }
 
             img {
-                width: 24px;
-                height: 24px;
+                width: 42px;
+                height: 42px;
             }
         }
     }
