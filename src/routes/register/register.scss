@@ -1,4 +1,4 @@
-.login {
+.registerPage {
     height: 100%;
     display: flex;
 
@@ -30,7 +30,7 @@
                 cursor: pointer;
 
                 &:disabled {
-                    background-color: #BED9D8;
+                    background-color: #bed9d8;
                     cursor: not-allowed;
                 }
             }
